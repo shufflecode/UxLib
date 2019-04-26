@@ -1,0 +1,50 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Colors.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
+    <!--Brushes aus Farben der Ui Definition Redundanzfrei-->
+    <SolidColorBrush x:Key="BlueBrush" Color="{StaticResource CustomBlue}"/>
+    <SolidColorBrush x:Key="RedBrush" Color="{StaticResource CustomRed}"/>
+
+    <!--Gehellte Brushes aus Farben der Ui Definition-->
+    <SolidColorBrush x:Key="BlueLight01Brush"   Color="{StaticResource CustomLight01Blue}"/>
+    <SolidColorBrush x:Key="BlueLight02Brush"   Color="{StaticResource CustomLight02Blue}"/>
+    <SolidColorBrush x:Key="BlueLight03Brush"   Color="{StaticResource CustomLight03Blue}"/>
+    <SolidColorBrush x:Key="BlueLight04Brush"   Color="{StaticResource CustomLight04Blue}"/>
+    <SolidColorBrush x:Key="BlueLight05Brush"   Color="{StaticResource CustomLight05Blue}"/>
+    <SolidColorBrush x:Key="BlueHighlightBrush" Color="{StaticResource BlueHighlightColor}"/>
+    
+    <SolidColorBrush x:Key="RedLight01Brush" Color="{StaticResource CustomLight01Red}"/>
+    <SolidColorBrush x:Key="RedLight02Brush" Color="{StaticResource CustomLight02Red}"/>
+    <SolidColorBrush x:Key="RedLight03Brush" Color="{StaticResource CustomLight03Red}"/>
+    <SolidColorBrush x:Key="RedLight04Brush" Color="{StaticResource CustomLight04Red}"/>
+    <SolidColorBrush x:Key="RedLight05Brush" Color="{StaticResource CustomLight05Red}"/>
+
+    <SolidColorBrush x:Key="FontBrush" Color="{StaticResource FontColor}"/>
+
+    <SolidColorBrush x:Key="ButtonPressedBrush"   Color="{StaticResource BlueHighlightColor}"/>
+
+    <!--Gradients-->
+    <LinearGradientBrush x:Key="GradientRed1" StartPoint="0.5,0" EndPoint="0,1">
+        <GradientStop Color="{StaticResource CustomRed}" Offset="0"/>
+        <GradientStop Color="{StaticResource CustomLight03Red}" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="GradientBlue1" StartPoint="0.5,1" EndPoint="0.5,0">
+        <GradientStop Color="{StaticResource CustomBlue}" Offset="0"/>
+        <GradientStop Color="{StaticResource CustomLight03Blue}" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ButtonGradient" StartPoint="0.5,0.5" EndPoint="0.5,0.5">
+        <GradientStop Color="{StaticResource CustomBlue}" Offset="0"/>        
+        <GradientStop Color="{DynamicResource CustomLight01Blue}" Offset="1"/>        
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ButtonPressedGradient" StartPoint="0.5,0.5" EndPoint="0.5,0.5">
+        <GradientStop Color="{StaticResource CustomLight01Blue}" Offset="0"/>
+        <GradientStop Color="{DynamicResource CustomBlue}" Offset="1"/>
+    </LinearGradientBrush>
+
+</ResourceDictionary>

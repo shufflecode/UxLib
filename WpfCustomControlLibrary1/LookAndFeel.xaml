@@ -1,0 +1,33 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!--Resource Dictionaries der library (Reihenfolge Wichtig!) -->
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/UxLib;component/Settings/Typography.xaml"/>
+        <ResourceDictionary Source="/UxLib;component/Settings/Settings.xaml"/>
+
+        <ResourceDictionary Source="/UxLib;component/Colors/Colors.xaml"/>
+        <ResourceDictionary Source="/UxLib;component/Colors/Brushes.xaml"/>
+
+        <ResourceDictionary Source="/UxLib;component/Bitmaps/Assets.xaml"/>
+        <ResourceDictionary Source="/UxLib;component/Bitmaps/Icons.xaml"/>
+        
+        <ResourceDictionary Source="/UxLib;component/VectorGraphics/Icons.xaml"/>
+       
+        <ResourceDictionary Source="/UxLib;component/Styles/Button.xaml"/>
+
+        <ResourceDictionary Source="/UxLib;component/Themes/Generic.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
+    
+    <!--Default Styles-->
+    <Style TargetType="Button" BasedOn="{StaticResource ButtonStyle}"/>
+    <Style x:Key="SecondaryButtonStyle" 
+           TargetType="{x:Type Button}" 
+           BasedOn="{StaticResource ButtonStyle}" >
+
+    </Style>
+        
+    
+
+</ResourceDictionary>

@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--16px-->
+    <ImageSource x:Key="Activity-16-Icon" >/UxLib;component/Bitmaps/Icons/16/Activity_16x.png</ImageSource>
+    <ImageSource x:Key="3Columns-16-Icon" >/UxLib;component/Bitmaps/Icons/16/3Columns_16x.png</ImageSource>
+    <!--32px-->
+
+    <!--...-->
+    <!--...-->
+
+</ResourceDictionary>

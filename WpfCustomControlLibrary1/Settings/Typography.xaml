@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    
+    <!--Fonts-->
+    <FontFamily x:Key="PrimaryFont">Verdana</FontFamily>
+    <FontWeight x:Key="NormalFontWeight">Normal</FontWeight>
+    <FontWeight x:Key="BoldFontWeight">Bold</FontWeight>
+
+    <!--FontSize-->
+    <system:Double x:Key="Layer1">36</system:Double>
+    <system:Double x:Key="Layer2">24</system:Double>
+    <system:Double x:Key="Layer3">11</system:Double>
+
+</ResourceDictionary>
