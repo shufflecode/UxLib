@@ -15,7 +15,7 @@
     <SolidColorBrush x:Key="BlueLight04Brush"   Color="{StaticResource CustomLight04Blue}"/>
     <SolidColorBrush x:Key="BlueLight05Brush"   Color="{StaticResource CustomLight05Blue}"/>
     <SolidColorBrush x:Key="BlueHighlightBrush" Color="{StaticResource BlueHighlightColor}"/>
-    
+    <SolidColorBrush x:Key="ButtonBorderBrush"  Color="{StaticResource ButtonBorderColor}"/>
     <SolidColorBrush x:Key="RedLight01Brush" Color="{StaticResource CustomLight01Red}"/>
     <SolidColorBrush x:Key="RedLight02Brush" Color="{StaticResource CustomLight02Red}"/>
     <SolidColorBrush x:Key="RedLight03Brush" Color="{StaticResource CustomLight03Red}"/>
@@ -37,13 +37,14 @@
         <GradientStop Color="{StaticResource CustomLight03Blue}" Offset="1"/>
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="ButtonGradient" StartPoint="0.5,0.5" EndPoint="0.5,0.5">
-        <GradientStop Color="{StaticResource CustomBlue}" Offset="0"/>        
-        <GradientStop Color="{DynamicResource CustomLight01Blue}" Offset="1"/>        
+    <LinearGradientBrush x:Key="ButtonGradient" StartPoint="0.5,0" EndPoint="0.5,1">
+            <GradientStop Color="#FF4D6FAC"/>
+            <GradientStop Color="#FF4A6CA9" Offset="0.5"/>
+            <GradientStop Color="#FF305492" Offset="0.5"/>
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="ButtonPressedGradient" StartPoint="0.5,0.5" EndPoint="0.5,0.5">
-        <GradientStop Color="{StaticResource CustomLight01Blue}" Offset="0"/>
+    <LinearGradientBrush x:Key="ButtonPressedGradient" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource CustomLight01Blue}" Offset="1"/>
         <GradientStop Color="{DynamicResource CustomBlue}" Offset="1"/>
     </LinearGradientBrush>
 

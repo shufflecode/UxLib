@@ -13,6 +13,7 @@
     <Color x:Key="CustomLight04Blue" >#4400008B</Color>
     <Color x:Key="CustomLight05Blue" >#2200008B</Color>
     <Color x:Key="BlueHighlightColor">#FF708BBA</Color>
+    <Color x:Key="ButtonBorderColor" >#FF121F33</Color>
 
     <!--Aufgehellt Rot-->
     <Color x:Key="CustomLight01Red">#AAFF0000</Color>
