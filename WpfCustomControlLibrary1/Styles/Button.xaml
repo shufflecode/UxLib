@@ -8,8 +8,56 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
-        <Setter Property="Background" Value="{StaticResource ButtonGradient}"/>
-        <Setter Property="BorderBrush" Value="{StaticResource ButtonBorderBrush}"/>
+        <Setter Property="Background" Value="{StaticResource Blue20Brush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource Blue20Brush}"/>
+        <Setter Property="Foreground" Value="{StaticResource FontBrush}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        <Setter Property="FontSize" Value="{StaticResource Layer3}"/>
+        <Setter Property="Padding" Value="11,0,11,0"/>
+        <Setter Property="Height" Value="27"/>
+        <Setter Property="Width" Value="90"/>
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                Padding="0"
+                                CornerRadius="2">
+                            <Grid>
+                                <Border x:Name="Highlight" 
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        CornerRadius="1"
+                                        BorderBrush="{StaticResource BlueHighlightBrush}"/>
+                                <ContentPresenter Margin="{TemplateBinding Padding}"
+                                                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                  RecognizesAccessKey="True"/>
+                            </Grid>
+                        </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="BorderThickness" 
+                                    TargetName="Highlight" Value="0,0,0,1"/>                            
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="{StaticResource ButtonPressedBrush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style x:Key="AccentButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{StaticResource AccentButtonGradient}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource Red50Brush}"/>
         <Setter Property="Foreground" Value="{StaticResource FontBrush}"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -32,7 +80,7 @@
                             <Border x:Name="Highlight" 
                                     BorderThickness="{TemplateBinding BorderThickness}"
                                     CornerRadius="1"
-                                    BorderBrush="{StaticResource BlueHighlightBrush}"/>
+                                    BorderBrush="{StaticResource RedHighlightBrush}"/>
                             <ContentPresenter Margin="{TemplateBinding Padding}"
                                               HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -42,7 +90,7 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsPressed" Value="True">
                             <Setter Property="BorderThickness" 
-                                    TargetName="Highlight" Value="0,0,0,1"/>                            
+                                    TargetName="Highlight" Value="0,0,0,1"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -50,10 +98,10 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsPressed" Value="True">
-                <Setter Property="Background" Value="{StaticResource ButtonPressedBrush}"/>
+                <Setter Property="Background" Value="{StaticResource RedHighlightBrush}"/>
             </Trigger>
         </Style.Triggers>
     </Style>
 
-    
+
 </ResourceDictionary>

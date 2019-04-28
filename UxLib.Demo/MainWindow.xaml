@@ -5,13 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="ColorBorderStyle" TargetType="Border" >
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Margin" Value="0,10,0,0"/>
+        </Style>
+    
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
+        <GroupBox Header="Base Colors" Grid.Column="0">
+            <StackPanel Orientation="Vertical">
+                <Border Style="{StaticResource ColorBorderStyle}"
+                        Background="{StaticResource BlueBrush}"/>
+                <Border Style="{StaticResource ColorBorderStyle}" 
+                        Background="{StaticResource RedBrush}"/>
+            </StackPanel>
+        </GroupBox>
         <GroupBox Header="Buttons"
-                  Grid.Column="0">
+                  Grid.Column="1">
             <StackPanel Orientation="Vertical"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center">
@@ -20,8 +38,23 @@
                 <Button Content="Secondary"
                         Margin="0,10,0,0"
                         Style="{StaticResource SecondaryButtonStyle}" />
+                <Button Content="Accent" Margin="0,10,0,0" Style="{StaticResource AccentButtonStyle}"/>
 
+                <ToggleButton Content="Toggle" Margin="0,10,0,0"/>
             </StackPanel>
+        </GroupBox>
+        <GroupBox Grid.Column="2" Header="Others">
+            <StackPanel Orientation="Vertical" 
+                        VerticalAlignment="Top">
+                <ListBox Margin="10" Height="70">
+                    <ListBox.Items>
+                        <ListBoxItem Content="First"/>
+                        <ListBoxItem Content="Second"/>
+                        <ListBoxItem Content="Third"/>
+                    </ListBox.Items>
+                </ListBox>
+            </StackPanel>
+
         </GroupBox>
     </Grid>
 </Window>

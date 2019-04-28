@@ -11,17 +11,22 @@
 
         <ResourceDictionary Source="/UxLib;component/Bitmaps/Assets.xaml"/>
         <ResourceDictionary Source="/UxLib;component/Bitmaps/Icons.xaml"/>
-        
         <ResourceDictionary Source="/UxLib;component/VectorGraphics/Icons.xaml"/>
        
+        <!--Control Styles-->
         <ResourceDictionary Source="/UxLib;component/Styles/Button.xaml"/>
+        <ResourceDictionary Source="/UxLib;component/Styles/ToggleButton.xaml"/>
+        <ResourceDictionary Source="/UxLib;component/Styles/ListBoxItem.xaml"/>
+        
 
+        <!--Themes-->
         <ResourceDictionary Source="/UxLib;component/Themes/Generic.xaml"/>
     </ResourceDictionary.MergedDictionaries>
     
     
     <!--Default Styles-->
     <Style TargetType="Button" BasedOn="{StaticResource ButtonStyle}"/>
+    
     <Style x:Key="SecondaryButtonStyle" 
            TargetType="{x:Type Button}" 
            BasedOn="{StaticResource ButtonStyle}" >
@@ -33,7 +38,8 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-        
-    
 
+    <Style TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButtonStyle}"/>
+
+    <Style TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource ListBoxItemStyle}"/>
 </ResourceDictionary>

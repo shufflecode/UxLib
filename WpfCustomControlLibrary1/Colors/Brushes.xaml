@@ -5,47 +5,39 @@
     </ResourceDictionary.MergedDictionaries>
     
     <!--Brushes aus Farben der Ui Definition Redundanzfrei-->
-    <SolidColorBrush x:Key="BlueBrush" Color="{StaticResource CustomBlue}"/>
-    <SolidColorBrush x:Key="RedBrush" Color="{StaticResource CustomRed}"/>
-
+    <SolidColorBrush x:Key="BlueBrush" Color="{StaticResource BaseBlueColor}"/>
+    <SolidColorBrush x:Key="RedBrush"  Color="{StaticResource BaseRedColor}"/>
+    
     <!--Gehellte Brushes aus Farben der Ui Definition-->
-    <SolidColorBrush x:Key="BlueLight01Brush"   Color="{StaticResource CustomLight01Blue}"/>
-    <SolidColorBrush x:Key="BlueLight02Brush"   Color="{StaticResource CustomLight02Blue}"/>
-    <SolidColorBrush x:Key="BlueLight03Brush"   Color="{StaticResource CustomLight03Blue}"/>
-    <SolidColorBrush x:Key="BlueLight04Brush"   Color="{StaticResource CustomLight04Blue}"/>
-    <SolidColorBrush x:Key="BlueLight05Brush"   Color="{StaticResource CustomLight05Blue}"/>
-    <SolidColorBrush x:Key="BlueHighlightBrush" Color="{StaticResource BlueHighlightColor}"/>
-    <SolidColorBrush x:Key="ButtonBorderBrush"  Color="{StaticResource ButtonBorderColor}"/>
-    <SolidColorBrush x:Key="RedLight01Brush" Color="{StaticResource CustomLight01Red}"/>
-    <SolidColorBrush x:Key="RedLight02Brush" Color="{StaticResource CustomLight02Red}"/>
-    <SolidColorBrush x:Key="RedLight03Brush" Color="{StaticResource CustomLight03Red}"/>
-    <SolidColorBrush x:Key="RedLight04Brush" Color="{StaticResource CustomLight04Red}"/>
-    <SolidColorBrush x:Key="RedLight05Brush" Color="{StaticResource CustomLight05Red}"/>
+    <SolidColorBrush x:Key="Blue10Brush" Color="{StaticResource  BaseBlueLight2Color}"/>
+    <SolidColorBrush x:Key="Blue20Brush" Color="{StaticResource BaseBlueLight1Color}"/>
+    <SolidColorBrush x:Key="Blue30Brush" Color="{StaticResource BaseBlueColor}"/>
+    <SolidColorBrush x:Key="Blue40Brush" Color="{StaticResource BaseBlueDark1Color}"/>
+    <SolidColorBrush x:Key="Blue50Brush" Color="{StaticResource BaseBlueDark2Color}"/>
+    <SolidColorBrush x:Key="BlueHighlightBrush" Color="{StaticResource BaseBlueLight2Color}"/>
+
+    <SolidColorBrush x:Key="Red10Brush" Color="{StaticResource  BaseRedLight2Color}"/>
+    <SolidColorBrush x:Key="Red20Brush" Color="{StaticResource BaseRedLight1Color}"/>
+    <SolidColorBrush x:Key="Red30Brush" Color="{StaticResource BaseRedColor}"/>
+    <SolidColorBrush x:Key="Red40Brush" Color="{StaticResource BaseRedDark1Color}"/>
+    <SolidColorBrush x:Key="Red50Brush" Color="{StaticResource BaseRedDark2Color}"/>
+    <SolidColorBrush x:Key="RedHighlightBrush" Color="{StaticResource BaseRedLight1Color}"/>
 
     <SolidColorBrush x:Key="FontBrush" Color="{StaticResource FontColor}"/>
-
-    <SolidColorBrush x:Key="ButtonPressedBrush"   Color="{StaticResource BlueHighlightColor}"/>
+    <SolidColorBrush x:Key="InactiveFontBrush" Color="{StaticResource Inactive}"/>
+    <SolidColorBrush x:Key="ButtonPressedBrush"   Color="{StaticResource BaseBlueLight2Color}"/>
 
     <!--Gradients-->
-    <LinearGradientBrush x:Key="GradientRed1" StartPoint="0.5,0" EndPoint="0,1">
-        <GradientStop Color="{StaticResource CustomRed}" Offset="0"/>
-        <GradientStop Color="{StaticResource CustomLight03Red}" Offset="1"/>
-    </LinearGradientBrush>
-
-    <LinearGradientBrush x:Key="GradientBlue1" StartPoint="0.5,1" EndPoint="0.5,0">
-        <GradientStop Color="{StaticResource CustomBlue}" Offset="0"/>
-        <GradientStop Color="{StaticResource CustomLight03Blue}" Offset="1"/>
-    </LinearGradientBrush>
-
     <LinearGradientBrush x:Key="ButtonGradient" StartPoint="0.5,0" EndPoint="0.5,1">
-            <GradientStop Color="#FF4D6FAC"/>
-            <GradientStop Color="#FF4A6CA9" Offset="0.5"/>
-            <GradientStop Color="#FF305492" Offset="0.5"/>
+        <GradientStop Color="{StaticResource BaseBlueColor}"/>
+        <GradientStop Color="{StaticResource BaseBlueColor}" Offset="0.5"/>
+        <GradientStop Color="{StaticResource BaseBlueDark1Color}" Offset="0.5"/>
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="ButtonPressedGradient" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Color="{StaticResource CustomLight01Blue}" Offset="1"/>
-        <GradientStop Color="{DynamicResource CustomBlue}" Offset="1"/>
+    <LinearGradientBrush x:Key="AccentButtonGradient" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource BaseRedColor}"/>
+        <GradientStop Color="{StaticResource BaseRedColor}" Offset="0.5"/>
+        <GradientStop Color="{StaticResource BaseRedDark1Color}" Offset="0.5"/>
     </LinearGradientBrush>
 
 </ResourceDictionary>
