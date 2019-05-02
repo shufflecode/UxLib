@@ -8,8 +8,8 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
-        <Setter Property="Background" Value="{StaticResource Blue20Brush}"/>
-        <Setter Property="BorderBrush" Value="{StaticResource Blue20Brush}"/>
+        <Setter Property="Background" Value="{StaticResource Blue30Brush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource Blue30Brush}"/>
         <Setter Property="Foreground" Value="{StaticResource FontBrush}"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -32,7 +32,7 @@
                                 <Border x:Name="Highlight" 
                                         BorderThickness="{TemplateBinding BorderThickness}"
                                         CornerRadius="1"
-                                        BorderBrush="{StaticResource BlueHighlightBrush}"/>
+                                        BorderBrush="{StaticResource Blue30Brush}"/>
                                 <ContentPresenter Margin="{TemplateBinding Padding}"
                                                   HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -50,7 +50,7 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsPressed" Value="True">
-                <Setter Property="Background" Value="{StaticResource ButtonPressedBrush}"/>
+                <Setter Property="Background" Value="{StaticResource BlueHighlightBrush}"/>
             </Trigger>
         </Style.Triggers>
     </Style>
